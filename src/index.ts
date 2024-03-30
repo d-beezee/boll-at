@@ -212,10 +212,9 @@ class A2A {
         debug: true,
     });
     try {
-
         await a2a.run();
     } catch (e) {
-        throw (e);
+        console.error(e);
     } finally {
         process.exit(0);
     }

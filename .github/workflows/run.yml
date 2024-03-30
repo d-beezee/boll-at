@@ -19,4 +19,4 @@ jobs:
           echo 'A2A_PASSWORD=${{ secrets.A2A_PASSWORD }}' >> .env
           echo 'A2A_USERNAME=${{ secrets.A2A_USERNAME }}' >> .env
           echo 'FIREBASE_CONFIG=${{ secrets.FIREBASE_CONFIG }}' >> .env
-          yarn start
+          yarn xxx
