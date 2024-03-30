@@ -2,7 +2,12 @@ import dotenv from 'dotenv';
 import * as firebase from 'firebase/app';
 import { getDatabase, ref, set } from 'firebase/database';
 import fs from 'fs';
-import puppeteer, { Browser, Page } from 'puppeteer';
+import { Browser, Page } from 'puppeteer';
+import puppeteer from 'puppeteer-extra';
+
+const StealthPlugin = require('puppeteer-extra-plugin-stealth')
+
+puppeteer.use(StealthPlugin())
 
 dotenv.config();
 
