@@ -13,10 +13,6 @@ jobs:
       - name: Install dependencies
         run: |
           yarn
-          yarn build
-      - name: Run test
-        uses: tj-actions/puppeteer@v5
-        id: puppeteer
-        with:
-          files: |
-            dist/index.js
+      - name: Run tests
+        run: |
+          yarn start
