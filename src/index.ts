@@ -211,6 +211,12 @@ class A2A {
         headless: true,
         debug: true,
     });
-    await a2a.run();
-    process.exit(0);
+    try {
+
+        await a2a.run();
+    } catch (e) {
+        throw (e);
+    } finally {
+        process.exit(0);
+    }
 })();
