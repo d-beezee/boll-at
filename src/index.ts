@@ -97,7 +97,7 @@ class A2A {
             console.log(`Media mensile: ${((gas + electricity).toFixed(2))} €`);
 
         } catch (e) {
-            await this.page.screenshot({ path: './error.png' });
+            await this.page.screenshot({ path: './screenshots/error.png' });
             console.error(e);
             throw e;
         } finally {

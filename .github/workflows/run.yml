@@ -20,3 +20,8 @@ jobs:
           echo 'A2A_USERNAME=${{ secrets.A2A_USERNAME }}' >> .env
           echo 'FIREBASE_CONFIG=${{ secrets.FIREBASE_CONFIG }}' >> .env
           yarn xxx
+      - name: Upload error screenshots
+        uses: actions/upload-artifact@v2
+        with:
+          name: screenshots
+          path: screenshots/
