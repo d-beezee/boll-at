@@ -1,0 +1,21 @@
+{
+  "name": "boll-at",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rimraf dist",
+    "transpile": "tsc --noEmit false ",
+    "build": "yarn clean && yarn transpile ",
+    "start": "tsnd --respawn   --transpile-only  ./src/index.ts"
+  },
+  "devDependencies": {
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.4.3"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "firebase": "^10.10.0",
+    "puppeteer": "^22.6.1"
+  }
+}

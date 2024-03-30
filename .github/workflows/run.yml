@@ -1,0 +1,22 @@
+name: CI
+on:
+  workflow_dispatch:
+jobs:
+  installDependencies:
+    name: Install Dependencies
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: Install dependencies
+        run: |
+          yarn
+          yarn build
+      - name: Run test
+        uses: tj-actions/puppeteer@v5
+        id: puppeteer
+        with:
+          files: |
+            dist/index.js
